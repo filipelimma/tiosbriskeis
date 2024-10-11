@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+    <title>Página Principal</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <nav>
+      <div class="header">
+        <div class="logoArea">
+          <img src="assets/tiosbriskeis.png" class="logo" />
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <div class="menu-bar"></div>
+          <div class="menu-bar"></div>
+          <div class="menu-bar"></div>
+        </div>
+        <div class="menu">
+
+          <a href="sobrenos.html">Sobre Nós</a>
+          <a href="cardapio.html">Cardápio</a>
+          <a href="contato.html">Contato</a>
+          <a href="index.html">Página Principal</a>
+
+      </div>
+      </div>
+      
+      <div class="dropdown-menu">
+        <button>SOBRE NÓS</button>
+        <button>CARDÁPIO</button>
+        <button>CONTATO</button>
+        <button>PÁGINA PRINCIPAL</button>
+      </div>
+    </nav>
+
+    <!-- Body -->
+    <div class="content">
+      <div class="welcome">
+        <div class="title-area">
+            <h2 class="welcome-text">Bem vindo ao nosso site</h2>
+          </div>
+        <div class="welcome-area"> 
+          <div class="text-box">
+            <h3 class="welcome-description">
+              Aqui, você vai descobrir os sabores irresistíveis e a qualidade
+              incomparável dos nossos sorvetes. Nossa paixão é criar momentos
+              doces e refrescantes para você e sua família. Explore nosso
+              cardápio, conheça nossa história e aproveite as delícias que temos
+              a oferecer!
+            </h3>
+          </div>
+          <img src="assets/sorvete.png" class="sorvete-description" />
+        </div>
+      </div>
+      <div class="cardapio-area">
+        <h2 class="cardapio-title">CARDÁPIO</h3>
+          <div class="button-area">
+            <button>
+              <img src="assets/botao1.png" class="butons-img" />
+            </button>
+            <button>
+              <img src="assets/botao2.png" class="butons-img"/>
+            </button>
+            <button>
+              <img src="assets/botao3.png" class="butons-img"/>
+            </button>
+          </div>
+      </div>
+    </div>
+
+    <div class="Sobre-Nos-Area">
+      <div class="title-sobre-nos">
+<h2 class="sobre-nos-title">Sobre Nós</h2>
+      </div>
+      
+      <div class="Sobre-nos-description">
+        <h3 class="sobre-nos-description-text">
+           Na tiosbriskeis, cada sorvete é feito com carinho e dedicação. Desde o início, nossa missão tem sido oferecer sabores autênticos e ingredientes selecionados, garantindo a melhor experiência a cada visita. Acreditamos que um sorvete de qualidade vai além do sabor: ele traz memórias, sorrisos e momentos inesquecíveis para você e sua família. Venha nos conhecer e faça parte dessa história doce e saborosa!
+        </h3>
+        <img src="assets/logo.png" class="logo2">
+        
+      </div>
+            <button class="button-saiba-mais">Saiba Mais</button>
+
+    </div>
+      <footer class="rodape">
+            <div class="rodape_itens">
+                <div class="seguir">
+                    <h2 class="titulo">Siga-nos!</h2>
+                    <div class="imagens">
+                        <img
+                            src="assets/image 2_logoFooter.png"
+                            alt=""
+                            class="logo"
+                        />
+                        <img
+                            src="assets/image 3_logoFooter.png"
+                            alt=""
+                            class="logo"
+                        />
+                        <img
+                            src="assets/image 4_logoFooter.png"
+                            alt=""
+                            class="logo"
+                        />
+                    </div>
+                </div>
+                <div class="pedido">
+                    <h2 class="titulo">faça seu pedido</h2>
+                    <div class="imagens">
+                        <img
+                            src="assets/image 6_logoFooter.png"
+                            alt=""
+                            class="logo"
+                        />
+                        <img
+                            src="assets/image 7_logoFooter.png"
+                            alt=""
+                            class="logo"
+                        />
+                        <img
+                            src="assets/image 8_logoFooter.png"
+                            alt=""
+                            class="logo"
+                        />
+                    </div>
+                </div>
+                <div class="localizacao">
+                    <h2 class="titulo">Localização</h2>
+                    <div class="endereco">
+                        <img
+                            src="assets/image 5_logoFooter.png"
+                            alt=""
+                        />
+                        <h2>Av. Alberto Carazzai, 1640.</h2>
+                    </div>
+                </div>
+                <div class="contato">
+                    <h2 class="titulo">Contato</h2>
+                    <div class="numero">
+                        <img
+                            src="assets/image 9_logoFooter.png"
+                            alt=""
+                        />
+                        <h2>(43) 9 xxxx-xxxx</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="direitos">
+                <h1>todos os direitos reservados.</h1>
+            </div>
+        </footer>
+         <script>
+function toggleMenu() {
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+  const body = document.body;
+  dropdownMenu.classList.toggle('active');
+}
+    </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const menu = document.querySelector('.menu');
+  const menuIcon = document.querySelector('.menu-icon');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  function toggleMenu() {
+    if (window.innerWidth > 1150) {
+      menu.style.display = 'flex';
+      menuIcon.style.display = 'none';
+      dropdownMenu.style.display = 'none';
+    } else {
+      menu.style.display = 'none';
+      menuIcon.style.display = 'flex';
+    }
+  }
+
+  window.addEventListener('resize', toggleMenu);
+  toggleMenu(); // Call it initially to set the correct state based on screen width
+
+  // Optional: Toggle dropdown menu when menu-icon is clicked
+  menuIcon.addEventListener('click', function() {
+    if (dropdownMenu.style.display === 'flex') {
+      dropdownMenu.style.display = 'none';
+    } else {
+      dropdownMenu.style.display = 'flex';
+    }
+  });
+});
+</script>
+  
+  </body>
+</html>
